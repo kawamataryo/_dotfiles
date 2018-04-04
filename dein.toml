@@ -396,6 +396,10 @@ let g:multi_cursor_prev_key='<C-l>'
 let g:multi_cursor_quit_key='<esc>'
 '''
 
+# markdownのtable拡張
+[[plugins]]
+repo = 'dhruvasagar/vim-table-mode'
+
 # ------------------------------------------------------------------------
 # ファイルサポートの追加
 # ------------------------------------------------------------------------
@@ -468,7 +472,6 @@ nnoremap :r<CR> :<C-u>R<CR>
 nnoremap :rs<CR> :<C-u>RS<CR>
 nnoremap :rv<CR> :<C-u>RV<CR>
 '''
-
 
 # ------------------------------------------------------------------------
 # deopleteの補完プラグインの追加

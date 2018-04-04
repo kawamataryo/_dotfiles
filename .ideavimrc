@@ -99,5 +99,11 @@ nnoremap sb :<C-u>Unite buffer_tab -buffer-name=file<CR>
 nnoremap sB :<C-u>Unite buffer -buffer-name=file<CR>
 
 " コード整形
-nnoremap == :action ReformatCode<CR>
-vnoremap == :action ReformatCode<CR>
+nnoremap == :action ReformatCode<CR> :action OptimizeImports<CR>
+vnoremap == :action ReformatCode<CR> :action OptimizeImports<CR>
+
+" import順の整理
+
+" コメントアウト
+nnoremap gcc :action CommentwithLineComment<CR>
+vnoremap gcc :action CommentwithLineComment<CR>
