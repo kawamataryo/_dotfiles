@@ -277,6 +277,20 @@ hook_add = '''
 let g:ref_refe_cmd = $HOME.'/.anyenv/envs/rbenv/shims/refe' "refeコマンドのパス
 '''
 
+# camelcaseの対応
+[[plugins]]
+repo = 'bkad/CamelCaseMotion'
+hook_add = '''
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+map <silent> ge <Plug>CamelCaseMotion_ge
+sunmap w
+sunmap b
+sunmap e
+sunmap ge
+'''
+
 # ------------------------------------------------------------------------
 # カラースキーム
 # ------------------------------------------------------------------------

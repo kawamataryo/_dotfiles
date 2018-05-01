@@ -17,7 +17,7 @@ fish_vi_key_bindings
 # PATHの追加
 # ---------------------------------------------------------------------
 # brewの設定
-set PATH $HOME/bin $HOME/.anyenv/bin /usr/local/bin  $PATH
+set PATH /usr/local/opt/openssl/bin $HOME/bin $HOME/.anyenv/bin /usr/local/bin  $PATH
 
 # anyenvの設定
 eval (anyenv init --no-rehash | source)
