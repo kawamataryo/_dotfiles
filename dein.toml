@@ -382,9 +382,7 @@ nmap k <Plug>(accelerated_jk_gk)
 repo = 't9md/vim-textmanip'
 hook_add = '''
 xmap <c-d> <Plug>(textmanip-duplicate-down)
-nmap <c-d> <Plug>(textmanip-duplicate-down)
 xmap <c-D> <Plug>(textmanip-duplicate-up)
-nmap <c-d> <plug>(textmanip-duplicate-up)
 
 xmap <c-j> <plug>(textmanip-move-down)
 xmap <c-h> <plug>(textmanip-move-left)
@@ -405,9 +403,28 @@ xmap  <Right>  <Plug>(textmanip-move-right)
 [[plugins]]
 repo = 'terryma/vim-multiple-cursors'
 hook_add = '''
-let g:multi_cursor_next_key='<C-h>'
-let g:multi_cursor_prev_key='<C-l>'
-let g:multi_cursor_quit_key='<esc>'
+let g:multi_cursor_use_default_mapping=0
+" Default mapping
+let g:multi_cursor_start_word_key      = '<C-h>'
+let g:multi_cursor_select_all_word_key = '<A-n>'
+let g:multi_cursor_start_key           = 'g<C-h>'
+let g:multi_cursor_select_all_key      = 'g<A-h>'
+let g:multi_cursor_next_key            = '<C-h>'
+let g:multi_cursor_prev_key            = '<C-l>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
+" NeoCompleteとの競合回避
+function! Multiple_cursors_before()
+  if exists(':NeoCompleteLock')==2
+    exe 'NeoCompleteLock'
+  endif
+endfunction
+
+function! Multiple_cursors_after()
+  if exists(':NeoCompleteUnlock')==2
+    exe 'NeoCompleteUnlock'
+  endif
+endfunction
 '''
 
 # markdownのtable拡張

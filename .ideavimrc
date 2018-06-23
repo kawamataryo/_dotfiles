@@ -112,8 +112,12 @@ nnoremap ;g :action FindInPath<CR>
 nnoremap R :action RenameElement<CR>
 
 " build
-nnoremap <C-b> :action BuildProject<CR>
+nnoremap <C-r> :action BuildProject<CR>
 
 " キャメルケース対応
 nnoremap w [w
 nnoremap b [b
+
+" ページ移動
+nnoremap <C-p> <C-u>
+nnoremap <C-n> <C-d>
