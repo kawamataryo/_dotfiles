@@ -94,10 +94,10 @@ syntax on
 set expandtab
 
 " 行頭以外のTab文字の表示幅（スペースいくつ分）
-set tabstop=4
+set tabstop=2
 
 " 自動インデント
-set shiftwidth=4
+set shiftwidth=2
 
 " カレント行番号を目立つように
 hi CursorLineNr term=bold   cterm=NONE ctermfg=228 ctermbg=NONE
@@ -174,6 +174,8 @@ augroup HighlightTrailingSpaces
   autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
 augroup END
 
+
+
 "------------------------------------------------------------------------------
 " その他設定
 "------------------------------------------------------------------------------
@@ -210,6 +212,8 @@ let g:terminal_color_4="#66d9ef"
 "------------------------------------------------------------------------------
 " キーマップ変更
 "------------------------------------------------------------------------------
+"連続ペースト
+vnoremap <silent> <C-p> "0p<CR>
 
 "挿入モードでの移動
 inoremap <silent> <C-a> <Esc>^<Insert>

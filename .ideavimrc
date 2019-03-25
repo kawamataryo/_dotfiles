@@ -46,6 +46,9 @@ set expandtab
 " surroundを有効
 set surround
 
+" マルチカーソルを有効化
+set multiple-cursors
+
 "改行時の行移動修正
 nnoremap j gj
 nnoremap k gk
@@ -121,3 +124,6 @@ nnoremap b [b
 " ページ移動
 nnoremap <C-p> <C-u>
 nnoremap <C-n> <C-d>
+
+" 連続ペースト
+vnoremap <silent> <C-p> "0p<CR>

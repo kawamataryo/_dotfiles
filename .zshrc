@@ -189,3 +189,5 @@ function ssh_conoha() {
     ssh-add -K ~/.ssh/conoha_patient_db/id_rsa
 }
 
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

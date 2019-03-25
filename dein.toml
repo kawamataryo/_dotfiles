@@ -469,6 +469,10 @@ repo = 'cakebaker/scss-syntax.vim'
 [[plugins]]
 repo = 'groenewege/vim-less'
 
+# stylus
+[[plugins]]
+repo = 'wavded/vim-stylus'
+
 # markdown
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
@@ -491,6 +495,9 @@ repo = 'jwalton512/vim-blade'
 # smarty
 [[plugins]]
 repo = 'vim-scripts/smarty-syntax'
+
+[[plugins]]
+repo = 'ElmCast/elm-vim'
 
 # ------------------------------------------------------------------------
 # webアプリケーションサポート
