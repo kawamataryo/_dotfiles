@@ -34,6 +34,12 @@ set clipboard+=unnamed
 " 対応する括弧を強調表示
 set showmatch
 
+" インデント方法の変更
+set cinoptions+=:0
+
+" インデント幅
+set shiftwidth=2
+
 " タブキー押下時に挿入される文字幅を指定
 set softtabstop=2
 

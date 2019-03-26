@@ -94,10 +94,10 @@ syntax on
 set expandtab
 
 " 行頭以外のTab文字の表示幅（スペースいくつ分）
-set tabstop=4
+set tabstop=2
 
 " 自動インデント
-set shiftwidth=4
+set shiftwidth=2
 
 " カレント行番号を目立つように
 hi CursorLineNr term=bold   cterm=NONE ctermfg=228 ctermbg=NONE
