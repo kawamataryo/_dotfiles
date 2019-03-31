@@ -236,7 +236,7 @@ nnoremap <silent> <C-r> :QuickRun<CR>
 repo = 'w0rp/ale'
 hook_add = '''
 " aleの動作を通常は切る
-let g:ale_enabled = 1
+let g:ale_enabled = 0
 " errorのガターを常に表示
 let g:ale_sign_column_always = 1
 " errorの表示フォントを設定
