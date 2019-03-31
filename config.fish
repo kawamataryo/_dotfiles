@@ -116,7 +116,7 @@ function ssh_git
 end
 
 # ---------------------------------------------------------------------
-# sshの設定
+# 便利alias
 # ---------------------------------------------------------------------
 
 function gnow
@@ -128,13 +128,26 @@ function gaa
 end
 
 function gc
-    git commit
+    git commit $argv
 end
 
 function gcm
-    git commit -m
+    git commit -m $argv
 end
 
 function gs
-    git status
+    git status $argv
 end
+
+function gpush
+    git push $argv
+end
+
+function gpull
+    git pull $argv
+end
+
+function rm
+    rmtrash $argv
+end
+
