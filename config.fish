@@ -7,7 +7,7 @@ end
 set -x fish_theme batman
 
 # vimモード
-fish_vi_key_bindings
+# fish_vi_key_bindings
 
 # ---------------------------------------------------------------------
 # ショートカット
@@ -115,6 +115,26 @@ function ssh_git
     ssh-add -K ~/.ssh/id_git_rsa
 end
 
+# ---------------------------------------------------------------------
+# sshの設定
+# ---------------------------------------------------------------------
+
 function gnow
     git now
+end
+
+function gaa
+    git add .
+end
+
+function gc
+    git commit
+end
+
+function gcm
+    git commit -m
+end
+
+function gs
+    git status
 end

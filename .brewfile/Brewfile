@@ -1,0 +1,173 @@
+
+# tap repositories and their packages
+
+tap homebrew/core
+brew ant
+brew apr
+brew apr-util
+brew argon2
+brew aspell
+brew autoconf
+brew automake
+brew boost
+brew brotli
+brew c-ares
+brew cmake
+brew ctags
+brew curl-openssl
+brew docker
+brew ffmpeg
+brew fish
+brew freetds
+brew freetype
+brew fribidi
+brew fzf
+brew gawk
+brew gdbm
+brew gettext
+brew git-flow
+brew git-now
+brew glib
+brew gmp
+brew gnu-getopt
+brew gperftools
+brew icu4c
+brew jansson
+brew jemalloc
+brew jpeg
+brew jvgrep
+brew lame
+brew libev
+brew libevent
+brew libffi
+brew libidn2
+brew libpng
+brew libpq
+brew libressl
+brew libsodium
+brew libtermkey
+brew libtool
+brew libunistring
+brew libuv
+brew libvterm
+brew libxml2
+brew libyaml
+brew libzip
+brew lua
+brew luajit
+brew mas
+brew maven
+brew mcrypt
+brew mhash
+brew mongodb
+brew mpfr
+brew msgpack
+brew mysql
+brew neovim
+brew nghttp2
+brew nkf
+brew node
+brew openldap
+brew openssl
+brew openssl@1.1
+brew pcre
+brew pcre2
+brew peco
+brew perl
+brew php
+brew php@7.1
+brew phpmyadmin
+brew pkg-config
+brew postgresql
+brew python
+brew python@2
+brew readline
+brew ripgrep
+brew rlwrap
+brew rmtrash
+brew ruby
+brew ruby-build
+brew sqlite
+brew the_platinum_searcher
+brew the_silver_searcher
+brew tidy-html5
+brew tig
+brew tmux
+brew translate-shell
+brew tree
+brew unibilium
+brew unixodbc
+brew vim
+brew webp
+brew wget
+brew wine
+brew x264
+brew xclip
+brew xvid
+brew xz
+brew yarn
+brew zsh
+brew zsh-completions
+
+tap homebrew/cask
+cask docker
+cask iterm2
+cask java
+cask vagrant
+cask vagrant-manager
+cask virtualbox
+cask xquartz
+
+tap homebrew/cask-fonts
+cask font-hack-nerd-font
+
+tap homebrew/php
+
+tap homebrew/science
+
+tap homebrew/services
+
+tap caskroom/cask
+
+tap heroku/brew
+brew heroku
+brew heroku-node
+
+tap neovim/neovim
+
+tap rcmdnk/file
+brew brew-file
+
+tap tkengo/highway
+brew highway
+
+# Other Homebrew packages
+brew chromedriver
+
+# App Store applications
+appstore 443987910 1Password (6.8.8)
+appstore 1091189122 Bear (1.6.10)
+appstore 563362017 CloudClip Manager (1.3.5)
+appstore 1037994372 DrCleanerPro (2.2.1)
+appstore 406056744 Evernote (7.9)
+appstore 1243219105 F5Access (2.0)
+appstore 682658836 GarageBand (10.3.2)
+appstore 668208984 GIPHY CAPTURE (4.1)
+appstore 493949693 iMage Tools (1.0.16)
+appstore 408981434 iMovie (10.1.11)
+appstore 408981381 iPhoto (9.6.1)
+appstore 409183694 Keynote (9.0)
+appstore 539883307 LINE (5.15.0)
+appstore  Install macOS High Sierra (13105)
+appstore 441258766 Magnet (2.4.2)
+appstore 992076693 MindNode (2.5.8)
+appstore 447697952 Nice Timer (2.9.0)
+appstore 409203825 Numbers (6.0)
+appstore 823766827 OneDrive (19.012.0121)
+appstore 409201541 Pages (8.0)
+appstore 803453959 Slack (3.3.8)
+appstore 425424353 The Unarchiver (4.1.0)
+appstore 585829637 Todoist (7.1.2)
+appstore 1278508951 Trello (2.10.10)
+appstore 485812721 TweetDeck (3.14)
+appstore 497799835 Xcode (10.2)
