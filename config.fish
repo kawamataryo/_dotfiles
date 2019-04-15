@@ -93,9 +93,11 @@ end
 # fzfの設定
 alias gcf "git branch | fzf | xargs git checkout"
 
+# ghqのエイリアス
+alias gh='hub browse (ghq list | fzf | cut -d "/" -f 2,3)'
+
 # cran
 function cr
   crane run
 end
 
-# func
