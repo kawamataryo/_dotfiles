@@ -449,6 +449,9 @@ let g:vim_json_syntax_conceal = 0
 [[plugins]]
 repo = 'posva/vim-vue'
 
+# typeScript
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
 # html5
 [[plugins]]
 repo = 'othree/html5.vim'
