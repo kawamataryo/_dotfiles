@@ -23,7 +23,8 @@ status --is-interactive; and source (rbenv init -|psub)
 # nodenv
 set -x NODENV_ROOT $HOME/.anyenv/envs/nodenv
 set -x PATH $HOME/.anyenv/envs/nodenv/bin $PATH
-set -gx PATH $NODENV_ROOT/shims $PATH
+set -x PATH $NODENV_ROOT/shims $PATH
+status --is-interactive; and source (nodenv init -|psub)
 
 # pyenv
 set -x PYENV_ROOT "$HOME/.anyenv/envs/pyenv"
@@ -32,6 +33,10 @@ status --is-interactive; and source (pyenv init -|psub)
 
 # openssl
 set -x LIBRARY_PATH $LIBRARY_PATH "/usr/local/opt/openssl/lib/"
+
+# go
+set -x GOPATH "$HOME"
+set -x PATH $PATH "$GOPATH/bin"
 
 # ---------------------------------------------------------------------
 # plugin設定
