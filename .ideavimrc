@@ -113,9 +113,9 @@ nnoremap gcc :action CommentwithLineComment<CR>
 vnoremap gcc :action CommentwithLineComment<CR>
 
 " denite風の操作
-nnoremap ;u :action RecentFiles<CR>
-nnoremap ;f :action SearchEverywhere<CR>
-nnoremap ;g :action FindInPath<CR>
+" nnoremap ;u :action RecentFiles<CR>
+" nnoremap ;f :action SearchEverywhere<CR>
+" nnoremap ;g :action FindInPath<CR>
 
 " リファクタリングのアクション
 nnoremap R :action RenameElement<CR>

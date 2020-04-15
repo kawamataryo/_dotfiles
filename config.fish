@@ -10,35 +10,6 @@ set -x fish_theme batman
 # fish_vi_key_bindings
 
 # ---------------------------------------------------------------------
-# envの設定
-# ---------------------------------------------------------------------
-# anyenvの設定
-set -x PATH $HOME/.anyenv/bin $PATH
-
-# rbenv
-set -x RBENV_ROOT "$HOME/.anyenv/envs/rbenv"
-set -x PATH $PATH "$RBENV_ROOT/bin"
-status --is-interactive; and source (rbenv init -|psub)
-
-# nodenv
-set -x NODENV_ROOT $HOME/.anyenv/envs/nodenv
-set -x PATH $HOME/.anyenv/envs/nodenv/bin $PATH
-set -x PATH $NODENV_ROOT/shims $PATH
-status --is-interactive; and source (nodenv init -|psub)
-
-# pyenv
-set -x PYENV_ROOT "$HOME/.anyenv/envs/pyenv"
-set -x PATH $PATH "$PYENV_ROOT/bin"
-status --is-interactive; and source (pyenv init -|psub)
-
-# openssl
-set -x LIBRARY_PATH $LIBRARY_PATH "/usr/local/opt/openssl/lib/"
-
-# go
-set -x GOPATH "$HOME"
-set -x PATH $PATH "$GOPATH/bin"
-
-# ---------------------------------------------------------------------
 # plugin設定
 # ---------------------------------------------------------------------
 set -U FZF_LEGACY_KEYBINDINGS 0
@@ -62,12 +33,39 @@ set -x PATH /usr/local/opt/openssl/bin $PATH
 set -x PATH /usr/local/opt/qt@5.5/bin $PATH
 
 # ---------------------------------------------------------------------
+# envの設定
+# ---------------------------------------------------------------------
+# anyenvの設定
+set -x PATH $HOME/.anyenv/bin $PATH
+
+# rbenv
+set -x RBENV_ROOT "$HOME/.anyenv/envs/rbenv"
+set -x PATH $PATH "$RBENV_ROOT/bin"
+status --is-interactive; and source (rbenv init -|psub)
+
+# nodenv
+set -x NODENV_ROOT "$HOME/.anyenv/envs/nodenv"
+set -x PATH $HOME/.anyenv/envs/nodenv/bin $PATH
+set -x PATH $NODENV_ROOT/shims $PATH
+status --is-interactive; and source (nodenv init -|psub)
+
+# pyenv
+set -x PYENV_ROOT "$HOME/.anyenv/envs/pyenv"
+set -x PATH $PATH "$PYENV_ROOT/bin"
+status --is-interactive; and source (pyenv init -|psub)
+
+# openssl
+set -x LIBRARY_PATH $LIBRARY_PATH "/usr/local/opt/openssl/lib/"
+
+
+
+# ---------------------------------------------------------------------
 # 便利alias
 # ---------------------------------------------------------------------
 # vim,vコマンドでnvimを開くようにする
-alias v "nvim"
-alias vi "nvim"
-alias vim "nvim"
+# alias v "nvim"
+# alias vi "nvim"
+# alias vim "nvim"
 
 # git alias
 alias ga  "git add"
@@ -104,5 +102,10 @@ alias gh='hub browse (ghq list | fzf | cut -d "/" -f 2,3)'
 # cran
 function cr
   crane run
+end
+
+# docker-compose
+function cr
+  docker-compose dc
 end
 
