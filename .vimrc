@@ -1,1 +1,0 @@
-/Users/kawamataryou/.config/nvim/init.vim
