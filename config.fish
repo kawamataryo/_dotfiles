@@ -54,58 +54,53 @@ set -x PYENV_ROOT "$HOME/.anyenv/envs/pyenv"
 set -x PATH $PATH "$PYENV_ROOT/bin"
 status --is-interactive; and source (pyenv init -|psub)
 
+# goenv
+set -x GOENV_ROOT "$HOME/.anyenv/envs/goenv"
+set -x PATH $PATH "$GOENV_ROOT/bin"
+
+set -gx PATH "$GOENV_ROOT/shims" $PATH
+set -gx GOENV_SHELL fish
+source "$GOENV_ROOT/libexec/../completions/goenv.fish"
+command goenv rehash 2>/dev/null
+function goenv
+  set command $argv[1]
+  set -e argv[1]
+
+  switch "$command"
+  case rehash shell
+    source (goenv "sh-$command" $argv|psub)
+  case '*'
+    command goenv "$command" $argv
+  end
+end
+
 # openssl
 set -x LIBRARY_PATH $LIBRARY_PATH "/usr/local/opt/openssl/lib/"
 
+# google-cloud-sdk
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 
+# flutter
+set -x PATH $PATH "$HOME/flutter/bin"
 
 # ---------------------------------------------------------------------
 # 便利alias
 # ---------------------------------------------------------------------
-# vim,vコマンドでnvimを開くようにする
-# alias v "nvim"
-# alias vi "nvim"
-# alias vim "nvim"
-
-# git alias
-alias ga  "git add"
-alias gaa  "git add ."
-alias gd  "git diff"
-alias gb  "git branch"
-alias gc "git checkout"
-alias gm "git commit"
-alias gs "git status"
-
-function ga
-  git add $arg
-end
-
-function gaa
-  git add .
-end
-
-function gm
-  git commit $arg
-end
-
-# rmtrash
-function rmt
-  rmtrash $arg
-end
 
 # fzfの設定
 alias gcf "git branch | fzf | xargs git checkout"
 
-# ghqのエイリアス
-alias gh='hub browse (ghq list | fzf | cut -d "/" -f 2,3)'
+# nvimの設定
+alias vim nvim
+alias vi nvim
+alias v nvim
 
-# cran
-function cr
-  crane run
+# githubにリポジトリを作り、ghqで取得、vscodeでひらく
+function ghcr
+ gh repo create $argv
+ ghq get git@github.com:kawamataryo/{$argv[1]}.git
+ code /Users/kawamataryou/ghq/github.com/kawamataryo/{$argv[1]}
 end
 
-# docker-compose
-function cr
-  docker-compose dc
-end
-
+# ghコマンドの補完
+eval (gh completion -s fish| source)
